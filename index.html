@@ -48,7 +48,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="title">Ефективні рішення для <br />вашого бізнесу</h1>
-                <button type="button" class="hero-button">Замовити послугу</button>
+                <button type="button" class="hero-button" data-open-modal>Замовити послугу</button>
             </div>
         </section>
 
@@ -80,13 +80,22 @@
                 <h2 class="title">Чим ми займаємося</h2>
                 <ul class="do-box">
                     <li class="item">
-                        <img src="./images/desktop-solutions.jpg" alt="Десктопні рішення" width="370" height="294" />
+                        <div class="product">
+                            <img src="./images/desktop-solutions.jpg" alt="Десктопні додатки" width="370" height="294" />
+                            <p class="description">Десктопні додатки</p>
+                        </div>
                     </li>
                     <li class="item">
-                        <img src="./images/mobile-applications.jpg" alt="Мобільні додатки" width="370" height="294" />
+                        <div class="product">
+                            <img src="./images/mobile-applications.jpg" alt="Мобільні додатки" width="370" height="294" />
+                            <p class="description">Мобільні додатки</p>
+                        </div>
                     </li>
                     <li class="item">
-                        <img src="./images/design-solutions.jpg" alt="Дизайнерські рішення" width="370" height="294" />
+                        <div class="product">
+                            <img src="./images/design-solutions.jpg" alt="Дизайнерські рішення" width="370" height="294" />
+                            <p class="description">Дизайнерські рішення</p>
+                        </div>
                     </li>
                 </ul>            
             </div>
@@ -278,7 +287,7 @@
             <div class="social-links">
                 <h2 class="title">Приєднуйтесь</h2>
                 <ul class="links">
-                    <li class="link"><a href="https://www.instagram.com/"></a></li>
+                    <li class="link"><a href="https://instagram.com/"></a></li>
                     <li class="link"><a href="https://twitter.com/"></a></li>
                     <li class="link"><a href="https://facebook.com/"></a></li>
                     <li class="link"><a href="https://linkedin.com/"></a></li>
@@ -286,6 +295,32 @@
             </div>            
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-backdrop>
+        <div class="modal">
+            <button data-close-modal>&#10006</button>
+        </div>
+    </div>
+
+    <script>
+        const refs = {
+            openModalBtn: document.querySelector("[data-open-modal]"),
+            closeModalBtn: document.querySelector("[data-close-modal]"),
+            backdrop: document.querySelector("[data-backdrop]"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        refs.backdrop.addEventListener("click", logBackdropClick);
+
+        function toggleModal() {
+            refs.backdrop.classList.toggle("is-hidden");
+        }
+
+        function logBackdropClick() {
+            console.log("Это клик в бекдроп");
+        }
+    </script>
 </body>
 
 </html>
