@@ -55,6 +55,8 @@ header .contacts {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    transition: color 250ms var(--timing-function);
 }
 .box .item {
     position: relative;
@@ -102,6 +104,8 @@ header .logo{
     margin-right: 10px;
     fill: currentColor;
     vertical-align: middle;
+
+    transition: fill 250ms var(--timing-function);
 }
 
 
@@ -192,8 +196,8 @@ header .logo{
 
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms var(--timing-function), 
-                opacity 250ms var(--timing-function);
+    transition: transform 500ms var(--timing-function), 
+                opacity 500ms var(--timing-function);
 }
 .modal button {
     float: right;
@@ -368,6 +372,7 @@ span,
 .contacts.email,
 .contacts.phone {
     color: var(--footer-contact-color);
+    transition: color 250ms var(--timing-function);
 }
 
 .team {
@@ -396,6 +401,8 @@ span,
 }
 .icon-social {
     fill: currentColor;
+    transition: color 250ms var(--timing-function),
+                background-color 250ms var(--timing-function);
 }
 
 .soc-link:hover,
@@ -415,7 +422,9 @@ span,
     margin-right: 30px;
     padding: 16px 32px;
     color: var(--icon-color);
-}
+    transition: color 250ms var(--timing-function),
+                border-color 250ms var(--timing-function);
+    }
 .company a {
     color: inherit;
 }
@@ -424,6 +433,7 @@ span,
 }
 .icon {
     fill: currentColor;
+    transition: fill 250ms var(--timing-function);
 }
 .company:hover {
     border-color: var(--logo-color);
@@ -452,7 +462,13 @@ span,
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    letter-spacing: 0.03em
+    letter-spacing: 0.03em;
+
+    transition: color 250ms var(--timing-function),
+                background-color 250ms var(--timing-function),
+                padding-left 250ms var(--timing-function),
+                padding-right 250ms var(--timing-function),
+                box-shadow 250ms var(--timing-function);
 }
 
 .filters button {
@@ -500,6 +516,8 @@ span,
     margin-bottom: 30px;
     border: 1px solid #EEE;
     padding-bottom: 20px;
+
+    transition: box-shadow 250ms var(--timing-function);
 }
 .work-item:focus,
 .work-item:hover {
@@ -589,6 +607,9 @@ footer {
     background-color: rgba(255, 255, 255, .1);
     border-radius: 50%;
     margin-right: 10px;
+
+    transition: color 250ms var(--timing-function),
+                background-color 250ms var(--timing-function);    
 }
 .link .icon-social{
     fill: #fff;
